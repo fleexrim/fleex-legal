@@ -415,7 +415,7 @@ If you have any questions, concerns, or requests regarding this Privacy Policy o
 
 **Fleex Support Team**
 
-- **Email:** medvallhamady@gmail.com
+- **Email:** fleexrim@gmail.com
 - **Phone/WhatsApp:** +222 49 49 25 26
 - **Location:** Nouakchott, Mauritania
 
@@ -434,7 +434,7 @@ If you have any questions, concerns, or requests regarding this Privacy Policy o
 
 If you have concerns about how we handle your data, you may contact our Data Protection Officer at:
 
-**Email:** medvallhamady@gmail.com
+**Email:** fleexrim@gmail.com
 **Subject:** Data Protection Inquiry
 
 ---

@@ -497,7 +497,7 @@ You may voluntarily terminate your account at any time:
 ### 10.5 Appeal Process
 
 If your account is suspended or terminated, you may appeal:
-1. Contact **medvallhamady@gmail.com** with subject "Account Suspension Appeal"
+1. Contact **fleexrim@gmail.com** with subject "Account Suspension Appeal"
 2. Provide **evidence and explanation** for the incident
 3. Fleex will review and respond within **7 business days**
 4. Fleex's decision on appeal is **final**
@@ -531,7 +531,7 @@ You must maintain:
 If you are involved in an accident:
 1. **Ensure safety:** Check for injuries and call emergency services if needed
 2. **Report to authorities:** File a police report as required by law
-3. **Report to Fleex:** Notify Fleex within **24 hours** via medvallhamady@gmail.com or WhatsApp +222 49 49 25 26
+3. **Report to Fleex:** Notify Fleex within **24 hours** via fleexrim@gmail.com or WhatsApp +222 49 49 25 26
 4. **Document the scene:** Take photos, exchange information with other parties
 5. **Contact your insurance:** File a claim with your insurance provider
 
@@ -555,7 +555,7 @@ If you are involved in an accident:
 ### 12.1 Informal Resolution
 
 Before filing a legal claim, you agree to:
-1. Contact Fleex support at **medvallhamady@gmail.com**
+1. Contact Fleex support at **fleexrim@gmail.com**
 2. Describe the dispute in detail
 3. Allow Fleex **30 days** to investigate and respond
 4. Engage in good-faith negotiations to resolve the dispute
@@ -699,7 +699,7 @@ If you have questions or concerns about these Terms, please contact us:
 
 **Fleex Support Team**
 
-- **Email:** medvallhamady@gmail.com
+- **Email:** fleexrim@gmail.com
 - **Phone/WhatsApp:** +222 49 49 25 26
 - **Location:** Nouakchott, Mauritania
 

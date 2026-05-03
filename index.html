@@ -2,81 +2,372 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Fleex Driver - Legal Documents, Privacy Policy, and Terms of Service">
     <title>Fleex Driver - Legal Documents</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
             line-height: 1.6;
             color: #333;
-            background-color: #f5f5f5;
-        }
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #00A651;
-            border-bottom: 3px solid #FFD700;
-            padding-bottom: 10px;
-        }
-        .links {
-            list-style: none;
-            padding: 0;
-        }
-        .links li {
-            margin: 15px 0;
-        }
-        .links a {
-            display: block;
-            padding: 15px 20px;
-            background: #00A651;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .links a:hover {
-            background: #008940;
-        }
-        .contact {
-            margin-top: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
             padding: 20px;
-            background: #f9f9f9;
-            border-left: 4px solid #FFD700;
         }
-        .contact h2 {
-            margin-top: 0;
-            color: #00A651;
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1rem;
+            opacity: 0.95;
+        }
+
+        .lang-selector {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .lang-btn {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .lang-btn:hover {
+            background: white;
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        .content {
+            padding: 40px 20px;
+        }
+
+        .document-section {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .document-section:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateX(5px);
+        }
+
+        .document-section h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .document-section p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .document-section ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .document-section li {
+            margin-bottom: 8px;
+        }
+
+        .document-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .doc-link {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .doc-link:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .contact-box h2 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            width: 40px;
+            text-align: center;
+        }
+
+        .contact-text {
+            flex: 1;
+        }
+
+        .contact-text strong {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .contact-text span {
+            font-size: 1.1rem;
+        }
+
+        .footer {
+            background: #2d3748;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: #a0aec0;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        .update-info {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 25px;
+        }
+
+        .update-info p {
+            margin: 5px 0;
+            color: #856404;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .header {
+                padding: 30px 15px;
+            }
+
+            .content {
+                padding: 20px 15px;
+            }
+
+            .document-section {
+                padding: 20px;
+            }
+
+            .document-section h2 {
+                font-size: 1.2rem;
+            }
+
+            .document-links {
+                flex-direction: column;
+            }
+
+            .doc-link {
+                text-align: center;
+                width: 100%;
+            }
+
+            .contact-box {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Fleex Driver - Legal Documents</h1>
-        <p>Welcome to Fleex Driver legal documentation. Please review our policies below:</p>
-
-        <ul class="links">
-            <li><a href="privacy_policy.html">📄 Privacy Policy</a></li>
-            <li><a href="terms_of_service.html">📋 Terms of Service</a></li>
-        </ul>
-
-        <div class="contact">
-            <h2>Contact Us</h2>
-            <p><strong>Email:</strong> fleexrim@gmail.com</p>
-            <p><strong>Phone/WhatsApp:</strong> +222 49 49 25 26</p>
-            <p><strong>Location:</strong> Nouakchott, Mauritania</p>
+        <div class="header">
+            <h1>Fleex Driver</h1>
+            <p>Legal Documents & Privacy Information</p>
+            <div class="lang-selector">
+                <span class="lang-btn" style="background: white; color: #667eea; cursor: default;">English</span>
+                <a href="privacy_policy_ar.html" class="lang-btn">العربية (Arabic)</a>
+            </div>
         </div>
 
-        <p style="margin-top: 30px; color: #666; font-size: 14px;">
-            <strong>Last Updated:</strong> May 1, 2026<br>
-            <strong>Effective Date:</strong> May 1, 2026
-        </p>
+        <div class="content">
+            <div class="update-info">
+                <p><strong>Last Updated:</strong> May 1, 2026</p>
+                <p><strong>Version:</strong> 1.0</p>
+            </div>
+
+            <div class="document-section">
+                <h2>📜 Privacy Policy</h2>
+                <p>Our Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use the Fleex Driver app. Learn about:</p>
+                <ul>
+                    <li>What information we collect (personal data, location, photos)</li>
+                    <li>How we use your data to provide services</li>
+                    <li>Background location tracking (even when app is closed)</li>
+                    <li>Your privacy rights under GDPR</li>
+                    <li>Data retention and security measures</li>
+                </ul>
+                <div class="document-links">
+                    <a href="privacy_policy.html" class="doc-link">📖 Read in English</a>
+                    <a href="privacy_policy_ar.html" class="doc-link">📖 اقرأ بالعربية</a>
+                </div>
+            </div>
+
+            <div class="document-section">
+                <h2>📋 Terms of Service</h2>
+                <p>Our Terms of Service govern your use of the Fleex Driver app and define the relationship between you and Fleex. Important topics include:</p>
+                <ul>
+                    <li>Driver eligibility and requirements</li>
+                    <li>Independent contractor relationship</li>
+                    <li>Fare calculation and earnings structure</li>
+                    <li>GPS tracking and fraud detection</li>
+                    <li>Professional conduct and safety requirements</li>
+                    <li>Account suspension and termination policies</li>
+                </ul>
+                <div class="document-links">
+                    <a href="terms_of_service.html" class="doc-link">📖 Read in English</a>
+                    <a href="terms_of_service_ar.html" class="doc-link">📖 اقرأ بالعربية</a>
+                </div>
+            </div>
+
+            <div class="contact-box">
+                <h2>📞 Contact Us</h2>
+                <p style="margin-bottom: 20px;">If you have questions, concerns, or need support, please contact us:</p>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-text">
+                            <strong>Email</strong>
+                            <span>fleexrim@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-text">
+                            <strong>Phone / WhatsApp</strong>
+                            <span>+222 49 49 25 26</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-text">
+                            <strong>Location</strong>
+                            <span>Nouakchott, Mauritania</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.3);">
+                    <p style="font-size: 0.9rem; opacity: 0.95;"><strong>For specific inquiries, use these subject lines:</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 10px; font-size: 0.9rem;">
+                        <li>"Privacy Question" - General privacy inquiries</li>
+                        <li>"Data Access Request" - Request your data</li>
+                        <li>"Account Deletion Request" - Delete your account</li>
+                        <li>"Terms Question" - Questions about Terms of Service</li>
+                        <li>"Support" - General support requests</li>
+                    </ul>
+                    <p style="margin-top: 15px; font-size: 0.9rem;"><strong>Response Time:</strong> We aim to respond within 7 business days.</p>
+                </div>
+            </div>
+
+            <div class="document-section" style="border-left-color: #28a745;">
+                <h2>ℹ️ Important Information</h2>
+                <p><strong>Background Location Tracking:</strong> This app collects location data even when closed or not in use to enable ride matching and driver navigation.</p>
+                <p><strong>GDPR Compliance:</strong> We comply with GDPR regulations. You have rights to access, delete, port, and restrict processing of your data.</p>
+                <p><strong>Independent Contractor:</strong> Drivers are independent contractors, not employees of Fleex.</p>
+                <p><strong>Commission Structure:</strong> Fleex retains a commission from each fare. Details are shown before accepting rides.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>© 2026 Fleex. All rights reserved.</strong></p>
+            <p>Version 1.0 | Last Updated: May 1, 2026</p>
+            <p style="margin-top: 10px;">
+                <a href="privacy_policy.html">Privacy Policy</a> |
+                <a href="terms_of_service.html">Terms of Service</a>
+            </p>
+        </div>
     </div>
 </body>
 </html>

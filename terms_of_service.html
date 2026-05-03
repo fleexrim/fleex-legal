@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Fleex Driver Terms of Service - Legal agreement for using the Fleex Driver app">
+    <title>Terms of Service - Fleex Driver</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .header .subtitle {
+            font-size: 0.9rem;
+            opacity: 0.95;
+        }
+
+        .lang-selector {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn.active {
+            background: white;
+            color: #667eea;
+        }
+
+        .lang-btn:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .date-info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #667eea;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .date-info p {
+            margin: 5px 0;
+            font-size: 0.95rem;
+        }
+
+        .toc {
+            background: #f8f9fa;
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+
+        .toc h2 {
+            color: #28a745;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .toc ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .toc li {
+            margin-bottom: 8px;
+        }
+
+        .toc a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .toc a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        h2 {
+            color: #667eea;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #764ba2;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .important-notice {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .critical-notice {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .success-notice {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .contact-box h2 {
+            color: white;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            margin-top: 0;
+        }
+
+        .contact-box p {
+            margin: 10px 0;
+        }
+
+        .footer {
+            background: #2d3748;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #667eea;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .back-to-top:hover {
+            background: #764ba2;
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.2rem;
+            }
+
+            .content {
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            h3 {
+                font-size: 1rem;
+            }
+
+            .toc {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .lang-selector {
+                flex-direction: column;
+            }
+
+            .lang-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Terms of Service</h1>
+            <p class="subtitle">Fleex Driver</p>
+            <div class="lang-selector">
+                <a href="terms_of_service.html" class="lang-btn active">English</a>
+                <a href="terms_of_service_ar.html" class="lang-btn">العربية</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="date-info">
+                <p><strong>Last Updated:</strong> May 1, 2026</p>
+                <p><strong>Effective Date:</strong> May 1, 2026</p>
+            </div>
+
+            <div class="toc">
+                <h2>📑 Table of Contents</h2>
+                <ul>
+                    <li><a href="#acceptance">1. Acceptance of Terms</a></li>
+                    <li><a href="#definitions">2. Definitions</a></li>
+                    <li><a href="#eligibility">3. Eligibility and Driver Requirements</a></li>
+                    <li><a href="#contractor">4. Independent Contractor Relationship</a></li>
+                    <li><a href="#account">5. Account Registration and Security</a></li>
+                    <li><a href="#conduct">6. Driver Obligations and Conduct</a></li>
+                    <li><a href="#rides">7. Ride Acceptance and Completion</a></li>
+                    <li><a href="#earnings">8. Fare Calculation and Earnings</a></li>
+                    <li><a href="#ratings">9. Ratings and Reviews</a></li>
+                    <li><a href="#termination">10. Account Suspension and Termination</a></li>
+                    <li><a href="#liability">11. Liability and Insurance</a></li>
+                    <li><a href="#disputes">12. Dispute Resolution</a></li>
+                    <li><a href="#ip">13. Intellectual Property</a></li>
+                    <li><a href="#privacy">14. Privacy and Data Protection</a></li>
+                    <li><a href="#modifications">15. Modifications to Terms</a></li>
+                    <li><a href="#misc">16. Miscellaneous</a></li>
+                    <li><a href="#contact">17. Contact Information</a></li>
+                    <li><a href="#acknowledgment">18. Acknowledgment</a></li>
+                </ul>
+            </div>
+
+            <h2 id="acceptance">1. Acceptance of Terms</h2>
+            <p>Welcome to Fleex Driver. These Terms of Service ("Terms") constitute a legally binding agreement between you ("Driver," "you," or "your") and Fleex ("Company," "we," "our," or "us") governing your use of the Fleex Driver mobile application ("App") and related services.</p>
+
+            <div class="important-notice">
+                <p><strong>By creating an account, accessing, or using the Fleex Driver app, you agree to be bound by these Terms and our Privacy Policy.</strong></p>
+                <p><strong>If you do not agree to these Terms, you must not use the App or provide driver services through the Fleex platform.</strong></p>
+            </div>
+
+            <h2 id="definitions">2. Definitions</h2>
+            <ul>
+                <li><strong>"App":</strong> The Fleex Driver mobile application available on Android devices</li>
+                <li><strong>"Platform":</strong> The Fleex ride-hailing and delivery marketplace</li>
+                <li><strong>"Driver":</strong> An independent contractor who provides transportation or delivery services using the Platform</li>
+                <li><strong>"Passenger":</strong> A user who requests rides through the Fleex Passenger app or via our call center</li>
+                <li><strong>"Ride":</strong> A transportation service from pickup to dropoff location</li>
+                <li><strong>"Delivery":</strong> A package or food delivery service</li>
+                <li><strong>"Service":</strong> Transportation or delivery services provided by drivers to passengers</li>
+                <li><strong>"Fare":</strong> The amount charged to passengers for a ride or delivery</li>
+                <li><strong>"Commission":</strong> The percentage of the fare retained by Fleex</li>
+                <li><strong>"Earnings":</strong> The portion of the fare paid to the driver after commission</li>
+            </ul>
+
+            <h2 id="eligibility">3. Eligibility and Driver Requirements</h2>
+            <p>To use the Fleex Driver app, you must meet the following requirements:</p>
+
+            <h3>3.1 Age and Legal Capacity</h3>
+            <ul>
+                <li>You must be at least <strong>18 years of age</strong></li>
+                <li>You must have the legal capacity to enter into binding contracts under Mauritanian law</li>
+                <li>You must be legally authorized to work in Mauritania</li>
+            </ul>
+
+            <h3>3.2 Driver's License</h3>
+            <ul>
+                <li>You must hold a <strong>valid driver's license</strong> issued by Mauritanian authorities</li>
+                <li>Your license must be appropriate for the vehicle type you operate (car, motorcycle, toktok)</li>
+                <li>Your license must not be suspended, revoked, or expired</li>
+                <li>You must provide proof of your driver's license during registration</li>
+            </ul>
+
+            <h3>3.3 Vehicle Requirements</h3>
+            <ul>
+                <li>You must own or have legal permission to operate the vehicle</li>
+                <li>The vehicle must be properly registered with Mauritanian authorities</li>
+                <li>The vehicle must be in safe, operable condition</li>
+                <li>The vehicle must meet minimum safety standards (working lights, brakes, seatbelts)</li>
+                <li>The vehicle must match the type you registered in the App (car, motorcycle, toktok)</li>
+            </ul>
+
+            <h3>3.4 Insurance</h3>
+            <ul>
+                <li>You must maintain <strong>valid vehicle insurance</strong> as required by Mauritanian law</li>
+                <li>Your insurance must cover commercial use (ride-hailing and delivery services)</li>
+                <li>You must provide proof of insurance during registration and upon renewal</li>
+                <li><strong>Fleex does not provide vehicle insurance to drivers</strong></li>
+            </ul>
+
+            <h3>3.5 Device Requirements</h3>
+            <ul>
+                <li>You must have a <strong>smartphone running Android 5.0 or higher</strong></li>
+                <li>Your device must have GPS capabilities and a camera</li>
+                <li>You must maintain an active internet connection (mobile data or WiFi)</li>
+                <li>You must keep the App updated to the latest version</li>
+            </ul>
+
+            <div class="important-notice">
+                <p><strong>Failure to meet or maintain these requirements may result in account suspension or termination.</strong></p>
+            </div>
+
+            <h2 id="contractor">4. Independent Contractor Relationship</h2>
+
+            <h3>4.1 No Employment Relationship</h3>
+            <p><strong>You acknowledge and agree that:</strong></p>
+            <ul>
+                <li>You are an <strong>independent contractor</strong>, not an employee, agent, or partner of Fleex</li>
+                <li>You have no authority to bind Fleex to any obligation or contract</li>
+                <li>You are responsible for your own taxes, social security contributions, and insurance</li>
+                <li>You are not entitled to employee benefits (health insurance, paid leave, retirement benefits)</li>
+                <li>You control your own schedule and decide when and how often to use the App</li>
+            </ul>
+
+            <h3>4.2 Your Responsibilities</h3>
+            <p>As an independent contractor, you are responsible for:</p>
+            <ul>
+                <li><strong>Vehicle ownership and maintenance:</strong> All costs of purchasing, leasing, maintaining, and repairing your vehicle</li>
+                <li><strong>Fuel and operating costs:</strong> Gasoline, oil, tolls, parking fees, and other operating expenses</li>
+                <li><strong>Insurance:</strong> Obtaining and maintaining adequate vehicle and liability insurance</li>
+                <li><strong>Taxes:</strong> Paying all applicable income taxes, VAT, and business taxes</li>
+                <li><strong>Compliance with laws:</strong> Following all traffic laws, regulations, and local ordinances</li>
+            </ul>
+
+            <h2 id="account">5. Account Registration and Security</h2>
+
+            <h3>5.1 Account Creation</h3>
+            <p>To create a driver account:</p>
+            <ol>
+                <li>Download the Fleex Driver app from Google Play Store</li>
+                <li>Complete the registration form with accurate information</li>
+                <li>Upload required documents (driver's license, national ID, vehicle registration, insurance)</li>
+                <li>Upload vehicle photos and profile photo</li>
+                <li>Wait for admin verification and approval</li>
+            </ol>
+
+            <div class="critical-notice">
+                <p><strong>You must provide true, accurate, current, and complete information. Providing false information is grounds for immediate account termination.</strong></p>
+            </div>
+
+            <h3>5.2 Account Security</h3>
+            <p>You are responsible for:</p>
+            <ul>
+                <li><strong>Keeping your login credentials confidential:</strong> Do not share your email and password</li>
+                <li><strong>Single-device policy:</strong> Logging in on a new device will automatically log out the previous device</li>
+                <li><strong>Unauthorized access:</strong> You are liable for all activities conducted through your account</li>
+                <li><strong>Reporting breaches:</strong> Immediately notify Fleex if your account is compromised</li>
+            </ul>
+
+            <h3>5.3 Account Sharing Prohibited</h3>
+            <p><strong>You may not:</strong></p>
+            <ul>
+                <li>Share your account with other drivers</li>
+                <li>Allow another person to drive using your account</li>
+                <li>Use multiple accounts simultaneously</li>
+                <li>Transfer or sell your account to another person</li>
+            </ul>
+
+            <div class="critical-notice">
+                <p><strong>Violation of this policy will result in immediate account termination and potential legal action.</strong></p>
+            </div>
+
+            <h2 id="conduct">6. Driver Obligations and Conduct</h2>
+
+            <h3>6.1 Professional Conduct</h3>
+            <p>When providing services, you must:</p>
+            <ul>
+                <li>Be courteous and respectful to passengers at all times</li>
+                <li>Dress appropriately and maintain good personal hygiene</li>
+                <li>Communicate clearly and professionally</li>
+                <li>Assist passengers with loading and unloading luggage (when safe to do so)</li>
+                <li>Follow passenger instructions for route preferences (within reason)</li>
+                <li>Respect passenger privacy and confidentiality</li>
+            </ul>
+
+            <h3>6.2 Safety Requirements</h3>
+            <p>For passenger safety, you must:</p>
+            <ul>
+                <li>Obey all traffic laws (speed limits, traffic signals, seat belt requirements)</li>
+                <li>Do not drive while impaired by alcohol, drugs, or fatigue</li>
+                <li>Do not use your phone while driving (except for navigation with hands-free mount)</li>
+                <li>Ensure passengers wear seat belts before starting the ride</li>
+                <li>Report accidents immediately to Fleex and local authorities</li>
+                <li>Refuse unsafe requests (overloading vehicle, transporting dangerous items)</li>
+            </ul>
+
+            <h3>6.3 GPS Tracking and Fraud Detection</h3>
+
+            <div class="critical-notice">
+                <p><strong>By using the App, you consent to continuous GPS tracking and fraud detection measures.</strong></p>
+            </div>
+
+            <h4>GPS Tracking Requirements:</h4>
+            <ul>
+                <li><strong>Background location must remain enabled</strong> at all times when you are online</li>
+                <li>The App tracks your GPS coordinates <strong>every 10-60 seconds</strong> even when the screen is locked</li>
+                <li>GPS data is logged and stored for <strong>90 days</strong> for fraud investigation and billing verification</li>
+                <li><strong>You may not disable or interfere with GPS tracking</strong> while online</li>
+            </ul>
+
+            <h4>Fraud Detection and Prohibited Activities:</h4>
+            <p><strong>The following activities are strictly prohibited and will result in immediate account suspension:</strong></p>
+
+            <ol>
+                <li><strong>GPS Spoofing:</strong>
+                    <ul>
+                        <li>Using fake GPS apps or location-spoofing tools</li>
+                        <li>Teleporting (moving unrealistic distances in short time periods)</li>
+                        <li>Manipulating GPS coordinates to inflate fares</li>
+                    </ul>
+                </li>
+                <li><strong>Mock Locations:</strong>
+                    <ul>
+                        <li>Enabling "Mock Locations" in Android developer settings</li>
+                        <li>Using location-faking apps to simulate movement</li>
+                    </ul>
+                </li>
+                <li><strong>Route Manipulation:</strong>
+                    <ul>
+                        <li>Deliberately taking longer routes to inflate metered fares</li>
+                        <li>Creating artificial stopped time by unnecessarily idling</li>
+                        <li>Ignoring passenger-requested routes without valid reason</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h4>Fraud Detection System:</h4>
+            <ul>
+                <li><strong>Speed checks:</strong> Movements faster than 150 km/h are flagged as suspicious</li>
+                <li><strong>Accuracy checks:</strong> GPS accuracy better than 1 meter may indicate mock location</li>
+                <li><strong>Coordinate validation:</strong> Exact (0,0) coordinates are rejected</li>
+                <li><strong>Teleportation detection:</strong> Impossible distance jumps are logged and investigated</li>
+                <li><strong>Pattern analysis:</strong> Repeated suspicious behavior triggers admin review</li>
+            </ul>
+
+            <div class="critical-notice">
+                <p><strong>Consequences of GPS fraud:</strong></p>
+                <ul>
+                    <li><strong>First offense:</strong> Warning and mandatory training</li>
+                    <li><strong>Second offense:</strong> 30-day account suspension</li>
+                    <li><strong>Third offense:</strong> Permanent account termination</li>
+                    <li><strong>Severe cases:</strong> Legal action and potential criminal prosecution</li>
+                </ul>
+            </div>
+
+            <h3>6.4 Prohibited Conduct</h3>
+            <p>You must not:</p>
+            <ul>
+                <li>Discriminate against passengers based on race, ethnicity, religion, gender, disability, or destination</li>
+                <li>Harass or threaten passengers, other drivers, or Fleex staff</li>
+                <li>Solicit tips or additional payments beyond the app-calculated fare</li>
+                <li>Offer services outside the platform (attempting to bypass Fleex commission)</li>
+                <li>Engage in illegal activities (transporting illegal goods, solicitation, etc.)</li>
+                <li>Record passengers without their explicit consent (audio or video)</li>
+                <li>Share passenger information with third parties</li>
+                <li>Manipulate ratings (asking for 5-star ratings in exchange for benefits)</li>
+            </ul>
+
+            <h2 id="rides">7. Ride Acceptance and Completion</h2>
+
+            <h3>7.1 Ride Requests</h3>
+            <p>When you receive a ride request:</p>
+            <ul>
+                <li>You see: <strong>Pickup location, destination, distance, estimated fare, passenger name</strong></li>
+                <li>You have <strong>30 seconds</strong> to accept or decline</li>
+                <li><strong>You are not required to accept every request</strong></li>
+                <li>Declined rides are recorded for analytics but do not result in penalties</li>
+            </ul>
+
+            <h3>7.2 Ride Progression</h3>
+            <p>You must follow the correct ride workflow:</p>
+            <ol>
+                <li><strong>Accept Ride:</strong> Tap "Accept" when you receive a request</li>
+                <li><strong>Navigate to Pickup:</strong> Use in-app navigation to reach the passenger</li>
+                <li><strong>Arrive at Pickup:</strong> Tap "I've Arrived" when you reach the location</li>
+                <li><strong>Passenger Boards:</strong> Tap "Start Ride" when the passenger is in the vehicle</li>
+                <li><strong>In Progress:</strong> Navigate to the destination using the app</li>
+                <li><strong>Complete Ride:</strong> Tap "Complete Ride" when you reach the dropoff location</li>
+                <li><strong>Rate Passenger:</strong> Provide a rating (1-5 stars) and optional feedback</li>
+            </ol>
+
+            <h3>7.3 Ride Cancellations</h3>
+
+            <h4>When You May Cancel:</h4>
+            <ol>
+                <li><strong>Passenger Not Responding:</strong>
+                    <ul>
+                        <li>You waited 5+ minutes at pickup location</li>
+                        <li>Passenger does not answer calls or messages</li>
+                        <li><strong>Effect:</strong> Ride is relaunched to other drivers</li>
+                    </ul>
+                </li>
+                <li><strong>Rider Requested Cancellation:</strong>
+                    <ul>
+                        <li>Passenger verbally or via message asks you to cancel</li>
+                        <li><strong>Effect:</strong> Ride is marked as cancelled</li>
+                    </ul>
+                </li>
+                <li><strong>Other Reason:</strong>
+                    <ul>
+                        <li>Unsafe passenger behavior (intoxication, aggression)</li>
+                        <li>Vehicle breakdown or emergency</li>
+                        <li>Passenger destination violates terms (illegal activity)</li>
+                        <li><strong>Effect:</strong> Ride is marked as cancelled (requires admin review)</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h4>Cancellation Penalties:</h4>
+            <ul>
+                <li><strong>Before pickup:</strong> No penalty if valid reason</li>
+                <li><strong>After passenger boards:</strong> May result in penalties or suspension</li>
+                <li><strong>Repeated cancellations (&gt;20% rate):</strong> Account review and possible suspension</li>
+                <li><strong>Fraudulent cancellations:</strong> Immediate account suspension</li>
+            </ul>
+
+            <h2 id="earnings">8. Fare Calculation and Earnings</h2>
+
+            <h3>8.1 Fare Types</h3>
+
+            <h4>Fixed-Price Rides:</h4>
+            <ul>
+                <li>Fare is <strong>predetermined</strong> before the ride starts</li>
+                <li>Based on estimated distance and time</li>
+                <li><strong>Not affected</strong> by route taken or traffic delays</li>
+                <li>Displayed to you when accepting the ride</li>
+            </ul>
+
+            <h4>Metered Rides (Open Rides):</h4>
+            <ul>
+                <li>Fare is calculated <strong>based on actual distance and stopped time</strong></li>
+                <li>Uses GPS tracking to measure distance traveled and stopped time</li>
+                <li>Fare updates <strong>every second</strong> in real-time</li>
+                <li>Final fare may differ from estimate</li>
+            </ul>
+
+            <h3>8.2 Metered Fare Components</h3>
+            <p>Metered fares are calculated based on multiple factors including:</p>
+            <ol>
+                <li><strong>Distance traveled</strong> - Longer trips cost more</li>
+                <li><strong>Time spent</strong> - Including time stopped in traffic</li>
+                <li><strong>Demand conditions</strong> - Surge pricing may apply during peak hours</li>
+                <li><strong>Vehicle type</strong> - Different rates for cars, motorcycles, toktoktoks</li>
+            </ol>
+
+            <div class="important-notice">
+                <p><strong>Fare Details:</strong></p>
+                <ul>
+                    <li>Exact rates vary by ride type, vehicle category, time of day, and location</li>
+                    <li>Current fare breakdown is shown in the app BEFORE you accept each ride</li>
+                    <li>Fare configuration is controlled by Fleex and may change</li>
+                    <li>You will be notified of any significant rate changes</li>
+                </ul>
+            </div>
+
+            <h3>8.3 Commission Structure</h3>
+            <p>Fleex retains a <strong>commission</strong> from each fare:</p>
+            <ul>
+                <li><strong>Standard Commission:</strong> Percentage varies based on ride type, vehicle category, and region</li>
+                <li><strong>Earnings:</strong> You receive the remaining portion after commission is deducted</li>
+                <li><strong>Commission details</strong> are shown in the app for each ride before you accept</li>
+            </ul>
+
+            <div class="success-notice">
+                <p><strong>Example (illustrative only, actual amounts vary):</strong></p>
+                <ul>
+                    <li>Total Fare: 100%</li>
+                    <li>Commission: Percentage deducted</li>
+                    <li>Your Earnings: Remaining amount after commission</li>
+                </ul>
+                <p><strong>Commission rates are subject to change with 30 days' advance notice to drivers.</strong></p>
+            </div>
+
+            <h3>8.4 Payment and Payouts</h3>
+
+            <h4>Earnings Tracking:</h4>
+            <ul>
+                <li>View <strong>real-time earnings</strong> in the App dashboard</li>
+                <li>See <strong>daily, weekly, and monthly</strong> earnings summaries</li>
+                <li>Track <strong>completed rides, average fare, and total distance</strong></li>
+            </ul>
+
+            <h4>Payout Schedule:</h4>
+            <ul>
+                <li>Earnings are paid on a <strong>regular schedule</strong> (frequency communicated to drivers)</li>
+                <li>Payouts are deposited to your <strong>registered bank account</strong></li>
+                <li>Minimum payout threshold applies (specified in driver portal)</li>
+                <li>Payout timing details are provided in the app</li>
+            </ul>
+
+            <h2 id="ratings">9. Ratings and Reviews</h2>
+
+            <h3>9.1 Passenger Ratings</h3>
+            <p>After each ride, passengers can:</p>
+            <ul>
+                <li>Rate you <strong>1 to 5 stars</strong></li>
+                <li>Leave written feedback (optional)</li>
+            </ul>
+            <p>Your <strong>average rating</strong> is displayed to passengers and Fleex admin.</p>
+
+            <h3>9.2 Rating Requirements</h3>
+            <ul>
+                <li>You must maintain a <strong>minimum average rating</strong></li>
+                <li>Falling below the minimum triggers a <strong>warning and improvement plan</strong></li>
+                <li>Persistent low ratings may result in <strong>account suspension</strong></li>
+            </ul>
+
+            <h2 id="termination">10. Account Suspension and Termination</h2>
+
+            <h3>10.1 Suspension Reasons</h3>
+            <p>Fleex may suspend your account for:</p>
+            <ul>
+                <li>GPS fraud or spoofing</li>
+                <li>Low ratings (below minimum threshold)</li>
+                <li>High cancellation rate (above acceptable limit)</li>
+                <li>Safety violations (reckless driving, DUI)</li>
+                <li>Harassment or discrimination</li>
+                <li>Fraudulent activity (fare manipulation, fake rides)</li>
+                <li>Document expiration (license, insurance, registration)</li>
+                <li>Payment issues (chargebacks, disputes)</li>
+                <li>Terms violation (any breach of these Terms)</li>
+            </ul>
+
+            <h3>10.2 Termination by You</h3>
+            <p>You may voluntarily terminate your account at any time:</p>
+            <ol>
+                <li>Go to <strong>Settings &gt; Account &gt; Delete Account</strong> in the App</li>
+                <li>Confirm deletion and provide reason (optional)</li>
+                <li>Your account will be <strong>deactivated within 7 days</strong></li>
+                <li>Pending earnings will be paid within 30 days</li>
+            </ol>
+
+            <div class="important-notice">
+                <p><strong>Account deletion is permanent and cannot be undone. All ride history and data will be deleted after the retention period.</strong></p>
+            </div>
+
+            <h3>10.3 Appeal Process</h3>
+            <p>If your account is suspended or terminated, you may appeal:</p>
+            <ol>
+                <li>Contact <strong>fleexrim@gmail.com</strong> with subject "Account Suspension Appeal"</li>
+                <li>Provide <strong>evidence and explanation</strong> for the incident</li>
+                <li>Fleex will review and respond within <strong>7 business days</strong></li>
+                <li>Fleex's decision on appeal is <strong>final</strong></li>
+            </ol>
+
+            <h2 id="liability">11. Liability and Insurance</h2>
+
+            <h3>11.1 Driver Liability</h3>
+            <p><strong>You are solely responsible for:</strong></p>
+            <ul>
+                <li>Personal injury or property damage caused by your driving</li>
+                <li>Vehicle accidents involving your vehicle</li>
+                <li>Theft or damage to passenger property</li>
+                <li>Traffic violations and fines</li>
+                <li>Legal disputes arising from your services</li>
+            </ul>
+
+            <div class="critical-notice">
+                <p><strong>Fleex is not liable for any damages, injuries, or losses resulting from your provision of services.</strong></p>
+            </div>
+
+            <h3>11.2 Insurance Requirements</h3>
+            <p>You must maintain:</p>
+            <ul>
+                <li><strong>Commercial vehicle insurance</strong> covering ride-hailing and delivery services</li>
+                <li><strong>Minimum coverage amounts</strong> as required by Mauritanian law</li>
+                <li><strong>Proof of insurance</strong> must be uploaded to the App and kept current</li>
+            </ul>
+
+            <div class="critical-notice">
+                <p><strong>Fleex does not provide insurance coverage for drivers. You are responsible for obtaining your own insurance.</strong></p>
+            </div>
+
+            <h3>11.3 Accidents and Incidents</h3>
+            <p>If you are involved in an accident:</p>
+            <ol>
+                <li><strong>Ensure safety:</strong> Check for injuries and call emergency services if needed</li>
+                <li><strong>Report to authorities:</strong> File a police report as required by law</li>
+                <li><strong>Report to Fleex:</strong> Notify Fleex within <strong>24 hours</strong> via fleexrim@gmail.com or WhatsApp +222 49 49 25 26</li>
+                <li><strong>Document the scene:</strong> Take photos, exchange information with other parties</li>
+                <li><strong>Contact your insurance:</strong> File a claim with your insurance provider</li>
+            </ol>
+
+            <div class="important-notice">
+                <p><strong>Failure to report an accident to Fleex may result in account suspension.</strong></p>
+            </div>
+
+            <h2 id="disputes">12. Dispute Resolution</h2>
+
+            <h3>12.1 Informal Resolution</h3>
+            <p>Before filing a legal claim, you agree to:</p>
+            <ol>
+                <li>Contact Fleex support at <strong>fleexrim@gmail.com</strong></li>
+                <li>Describe the dispute in detail</li>
+                <li>Allow Fleex <strong>30 days</strong> to investigate and respond</li>
+                <li>Engage in good-faith negotiations to resolve the dispute</li>
+            </ol>
+
+            <h3>12.2 Governing Law</h3>
+            <p>These Terms are governed by the <strong>laws of Mauritania</strong>, without regard to conflict of law principles.</p>
+
+            <h2 id="ip">13. Intellectual Property</h2>
+
+            <h3>13.1 Fleex Trademarks</h3>
+            <p>All trademarks, logos, service marks, and trade names used in the App are the property of Fleex or third-party licensors.</p>
+            <p><strong>You may not:</strong></p>
+            <ul>
+                <li>Use Fleex Marks without written permission</li>
+                <li>Modify, copy, or reproduce Fleex Marks</li>
+                <li>Claim endorsement by Fleex</li>
+                <li>Register domain names or social media handles using Fleex Marks</li>
+            </ul>
+
+            <h3>13.2 App License</h3>
+            <p>Fleex grants you a <strong>limited, non-exclusive, non-transferable, revocable license</strong> to use the App for providing driver services.</p>
+            <p><strong>You may not:</strong></p>
+            <ul>
+                <li>Reverse engineer, decompile, or disassemble the App</li>
+                <li>Copy, modify, or create derivative works of the App</li>
+                <li>Rent, lease, sell, or sublicense the App</li>
+                <li>Remove copyright or proprietary notices from the App</li>
+            </ul>
+
+            <h2 id="privacy">14. Privacy and Data Protection</h2>
+            <p>Your use of the App is subject to our <strong>Privacy Policy</strong>, which is incorporated into these Terms by reference.</p>
+
+            <div class="important-notice">
+                <p><strong>Key privacy points:</strong></p>
+                <ul>
+                    <li><strong>Location tracking:</strong> Continuous GPS tracking when online (even with app closed or screen locked)</li>
+                    <li><strong>Data retention:</strong> GPS checkpoints retained for 90 days, ride history for 7 years</li>
+                    <li><strong>Data sharing:</strong> Location shared with passengers during rides, data shared with Fleex admin</li>
+                    <li><strong>Your rights:</strong> Access, deletion, portability, and objection under GDPR</li>
+                </ul>
+            </div>
+
+            <p><strong>Please read our Privacy Policy carefully to understand how we collect, use, and protect your data.</strong></p>
+            <p>Access the full Privacy Policy at: <a href="privacy_policy.html" style="color: #667eea;">Privacy Policy</a></p>
+
+            <h2 id="modifications">15. Modifications to Terms</h2>
+            <p>Fleex reserves the right to modify these Terms at any time.</p>
+
+            <p><strong>We will notify you of material changes by:</strong></p>
+            <ul>
+                <li>Sending a push notification through the App</li>
+                <li>Displaying a notice on the login screen</li>
+                <li>Sending an email to your registered email address</li>
+                <li>Updating the "Last Updated" date at the top of these Terms</li>
+            </ul>
+
+            <div class="important-notice">
+                <p><strong>Your continued use of the App after the effective date of the changes constitutes acceptance of the modified Terms.</strong></p>
+                <p>If you do not agree with the changes, you must stop using the App and delete your account.</p>
+            </div>
+
+            <h2 id="misc">16. Miscellaneous</h2>
+
+            <h3>16.1 Entire Agreement</h3>
+            <p>These Terms, together with the Privacy Policy, constitute the <strong>entire agreement</strong> between you and Fleex regarding your use of the App and supersede all prior agreements and understandings.</p>
+
+            <h3>16.2 Severability</h3>
+            <p>If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions will continue in full force and effect.</p>
+
+            <h3>16.3 Force Majeure</h3>
+            <p>Fleex is not liable for any failure to perform due to circumstances beyond its reasonable control, including natural disasters, war, terrorism, labor disputes, or technical failures.</p>
+
+            <div class="contact-box">
+                <h2 id="contact">17. Contact Information</h2>
+                <p>If you have questions or concerns about these Terms, please contact us:</p>
+
+                <p><strong>Fleex Support Team</strong></p>
+                <p><strong>Email:</strong> fleexrim@gmail.com</p>
+                <p><strong>Phone/WhatsApp:</strong> +222 49 49 25 26</p>
+                <p><strong>Location:</strong> Nouakchott, Mauritania</p>
+
+                <p style="margin-top: 20px;"><strong>For specific inquiries, use the following subject lines:</strong></p>
+                <ul style="margin-left: 20px; list-style: none;">
+                    <li>"Terms Question" for general inquiries</li>
+                    <li>"Account Suspension Appeal" for suspension appeals</li>
+                    <li>"Dispute" for fare or service disputes</li>
+                    <li>"Legal Notice" for formal legal matters</li>
+                </ul>
+
+                <p><strong>Response Time:</strong> We aim to respond to all inquiries within 7 business days.</p>
+            </div>
+
+            <h2 id="acknowledgment">18. Acknowledgment</h2>
+
+            <div class="critical-notice">
+                <p><strong>By creating an account and using the Fleex Driver app, you acknowledge that:</strong></p>
+                <ol>
+                    <li>You have read, understood, and agree to be bound by these Terms of Service</li>
+                    <li>You have read and understood the Privacy Policy</li>
+                    <li>You are an independent contractor and not an employee of Fleex</li>
+                    <li>You meet all eligibility requirements (age, license, insurance, vehicle)</li>
+                    <li>You consent to continuous GPS tracking when online</li>
+                    <li>You understand the fare structure, commission, and payout schedule</li>
+                    <li>You agree to provide professional, safe, and courteous service to passengers</li>
+                    <li>You accept liability for accidents, injuries, and damages arising from your services</li>
+                    <li>You may not engage in GPS spoofing, fraud, or other prohibited activities</li>
+                </ol>
+                <p><strong>If you do not agree to these Terms, you must not use the Fleex Driver app.</strong></p>
+            </div>
+
+            <div class="date-info">
+                <p><strong>Version:</strong> 1.0</p>
+                <p><strong>Last Updated:</strong> May 1, 2026</p>
+                <p><strong>Effective Date:</strong> May 1, 2026</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 Fleex. All rights reserved.</p>
+            <p><a href="index.html" style="color: #a0aec0;">Back to Home</a> | <a href="privacy_policy.html" style="color: #a0aec0;">Privacy Policy</a></p>
+        </div>
+    </div>
+
+    <a href="#" class="back-to-top" id="backToTop">↑</a>
+
+    <script>
+        // Back to top button
+        window.addEventListener('scroll', function() {
+            const backToTop = document.getElementById('backToTop');
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        document.getElementById('backToTop').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
